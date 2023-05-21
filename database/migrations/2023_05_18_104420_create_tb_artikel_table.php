@@ -39,7 +39,7 @@ class CreateTbArtikelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_penulis');
         Schema::dropIfExists('tb_artikel');
+        Schema::dropIfExists('tb_penulis');
     }
 }

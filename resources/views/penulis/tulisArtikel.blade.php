@@ -6,31 +6,35 @@
 
 @section('content')
     <div class="p-4 sm:ml-64">
-        @if(session()->has('success'))
-        <div class="alert alert-success">
-            {{session()->get('success')}}
-        </div>
-        @endif
-        <div class="card shadow mb-4">
+        <div class="card bg-gray-500 mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-white">Tulis Artikelmu Disini</h6>
             </div>
             <div class="card-body">
-                <form action="/author/add-article" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="title">Judul</label>
-                        <input name="title" type="text" class="form-control" id="title" placeholder="Masukkan judul">
-                    </div>
-                    <div class="form-group">
-                        <label for="body">Artikel</label>
-                        <textarea name="body" class="form-control" id="body" cols="30" rows="5" placeholder="Masukkan sebuah artikel"></textarea>
-                    </div>
-
-                    <div class="form-group d-flex justify-content-end">
-                        <button class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
+            <form action="/tulisArtikel" method="POST">
+                @csrf
+                <div class="mb-4">
+                    <label for="judul" class="block text-white text-sm font-bold mb-2">Judul</label>
+                    <input type="text" name="judul" id="judul" maxlength="50"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="isi_artikel" class="block text-whitetext-sm font-bold mb-2">Isi Artikel</label>
+                    <textarea name="isi_artikel" id="isi_artikel"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        rows="80"></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <a href="{{ route('penulis.daftarArtikel') }}"
+                        class="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800">
+                        Kembali
+                    </a>
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Simpan
+                    </button>
+                </div>
+            </form>
             </div>
         </div>
     </div>

@@ -36,14 +36,13 @@
         </div>
     @endif
     <div class="flex justify-center items-center min-h-screen bg-cover bg-center"
-        style="background-image: url('/assets/background.jpg'); padding-top: 100px;">
+        style="padding-top: 100px;">
         <div class="max-w-md w-full bg-white bg-opacity-90 rounded-lg shadow-lg">
             <div class="max-w-md w-full bg-white rounded-lg shadow-lg">
                 <div class="px-6 py-20">
                     <div>
-                        <img class="mx-auto h-12 w-auto" src="/assets/Artikelin.png" alt="Logo">
                         <h6 class="mt-6 text-center text-base leading-9 font-medium text-gray-500">
-                            Register akun Artikelin sebagai penulis.
+                            Register sebagai penulis.
                         </h6>
                     </div>
                     <form class="mt-8" action="{{ route('register') }}" method="POST">
@@ -61,7 +60,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-6">
+                        <div class="mt-6 text-center">
                             <button type="submit"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <span
@@ -71,13 +70,14 @@
                             </button>
                             <div class="text-center">
                                 <a href="/" class="text-gray-500 text-sm font-medium hover:text-gray-700">Kembali
-                                    ke halaman landing page</a>
+                                    ke landing page</a>
                             </div>
                         </div>
                     </form>
                     <div class="mt-4 text-sm text-center">
                         <p class="text-gray-600">Sudah memiliki akun? <a href="/login"
                                 class="text-red-600 font-medium hover:text-red-500">Login untuk masuk</a></p>
+                                <br>
                     </div>
                 </div>
             </div>
