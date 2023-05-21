@@ -2,34 +2,15 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Str;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
-    use HasFactory, HasUuids, HasApiTokens, Searchable;
-
-    public $incrementing = false;
-
-    protected $keyType = 'string';
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::creating(function ($model) {
-            if ($model->getKey() == null) {
-                $model->setAttribute($model->getKeyName(), Str::uuid()->toString());
-            }
-        });
-    }
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -37,19 +18,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
-        'role',
-        'photo',
+        'name',
         'email',
         'password',
     ];
-
-    public function toSearchableArray(): array
-    {
-        return [
-            'username' => $this->username,
-        ];
-    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -58,15 +30,15 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+        'remember_token',
     ];
 
-    public function stories(): HasMany
-    {
-        return $this->hasMany(Story::class);
-    }
-
-    public function comments(): HasMany
-    {
-        return $this->hasMany(Comment::class);
-    }
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }

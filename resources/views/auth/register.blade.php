@@ -43,21 +43,21 @@
                     <div>
                         <img class="mx-auto h-12 w-auto" src="/assets/Artikelin.png" alt="Logo">
                         <h6 class="mt-6 text-center text-base leading-9 font-medium text-gray-500">
-                            Login ke akun Artikelinmu sebagai Admin.
+                            Register akun Artikelin sebagai penulis.
                         </h6>
                     </div>
-                    <form class="mt-8" action="{{ route('login-admin') }}" method="POST">
+                    <form class="mt-8" action="{{ route('register') }}" method="POST">
                         @csrf
                         <div class="rounded-md shadow-sm">
                             <div>
                                 <input aria-label="username" name="username" type="username" required
                                     class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                    placeholder="Username">
+                                    placeholder="Username" maxlength="50">
                             </div>
                             <div class="-mt-px">
                                 <input aria-label="Password" name="password" type="password" required
                                     class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                    placeholder="Password">
+                                    placeholder="Password" maxlength="10" minlength="8">
                             </div>
                         </div>
 
@@ -66,7 +66,7 @@
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <span
                                     class="relative px-5 py-1 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                    Login
+                                    Register
                                 </span>
                             </button>
                             <div class="text-center">
@@ -75,13 +75,15 @@
                             </div>
                         </div>
                     </form>
+                    <div class="mt-4 text-sm text-center">
+                        <p class="text-gray-600">Sudah memiliki akun? <a href="/login"
+                                class="text-red-600 font-medium hover:text-red-500">Login untuk masuk</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    
     <!-- Scripts --->
     @stack('scripts')
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

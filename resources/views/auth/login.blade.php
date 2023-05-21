@@ -36,17 +36,17 @@
         </div>
     @endif
     <div class="flex justify-center items-center min-h-screen bg-cover bg-center"
-        style="background-image: url('/assets/background.jpg'); padding-top: 100px;">
+        style="background-image: url('/assets/bg.jpg'); padding-top: 100px;">
         <div class="max-w-md w-full bg-white bg-opacity-90 rounded-lg shadow-lg">
             <div class="max-w-md w-full bg-white rounded-lg shadow-lg">
                 <div class="px-6 py-20">
                     <div>
                         <img class="mx-auto h-12 w-auto" src="/assets/Artikelin.png" alt="Logo">
                         <h6 class="mt-6 text-center text-base leading-9 font-medium text-gray-500">
-                            Login ke akun Artikelinmu sebagai Admin.
+                            Login ke akun Artikelinmu sebagai penulis.
                         </h6>
                     </div>
-                    <form class="mt-8" action="{{ route('login-admin') }}" method="POST">
+                    <form class="mt-8" action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="rounded-md shadow-sm">
                             <div>
@@ -74,13 +74,21 @@
                                     ke halaman landing page</a>
                             </div>
                         </div>
+                        <div class="text-center mt-4">
+                            <a href="/login-admin" class="text-gray-500 text-sm font-medium hover:text-gray-700">Login
+                                sebagai admin</a>
+                        </div>
+
+
                     </form>
+                    <div class="mt-4 text-sm text-center">
+                        <p class="text-gray-600">Belum memiliki akun? <a href="/register"
+                                class="text-red-600 font-medium hover:text-red-500">Register untuk masuk</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     
     <!-- Scripts --->
     @stack('scripts')
