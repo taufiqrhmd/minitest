@@ -28,14 +28,49 @@
         <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Ayo jadilah bagian dari penciptaan artikel terkini.</p>
         <div class="row">
             <div class="col">
-                <a href="login" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                <a href="login" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-800 rounded-lg hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                 Log In
                 </a>
-                <a href="register" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                <a href="register" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-800 rounded-lg hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                 Register
                 </a>
             </div>
         </div>
+        <div class="p-20">
+                <div class="flex flex-wrap justify-center">
+
+                    @foreach ($artikels as $artikel)
+                        <div
+                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4 mr-10 mt-8">
+                            <a href="{{ route('artikel.show', ['id' => $artikel->id_artikel]) }}">
+                                <img class="rounded-t-lg object-cover h-48 w-full" src="/assets/bg.jpg"
+                                    alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="{{ route('artikel.show', ['id' => $artikel->id_artikel]) }}">
+                                    <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                                        {{ $artikel->judul }}
+                                    </h5>
+                                </a>
+                                <p class="mb-3 text-sm text-gray-700 dark:text-gray-400">
+                                    Penulis : {{ $artikel->penulis->username }}
+                                </p>
+                                <a href="{{ route('artikel.show', ['id' => $artikel->id_artikel]) }}"
+                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-800 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-700">
+                                    Selengkapnya .....
+                                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
     </div>
 
     
