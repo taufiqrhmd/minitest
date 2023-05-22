@@ -6,7 +6,7 @@
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-white dark:text-gray-400">
             <div class="flex items-center justify-between">
-                <button type="button"
+                <!-- <button type="button"
                     onclick="window.location.href='{{ route( 'penulis.tulisArtikel' ) }}'"
                     class="flex items-center justify-center w-full text-white bg-yellow-400 hover:bg-yellow-300 focus:ring-4 focus:ring-red-200 font-medium text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-200">
                     <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"
@@ -15,7 +15,7 @@
                             d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                     </svg>
                     Tulis Artikel Baru
-                </button>
+                </button> -->
             </div>
             <thead class="bg-yellow-400 text-white uppercase dark:bg-gray-700">
                 <tr>

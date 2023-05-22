@@ -9,7 +9,7 @@ class Artikel extends Model
 {
     use HasFactory;
 
-    public $table = 'tb_artikel';
+    protected $table = 'tb_artikel';
 
     protected $fillable = [
         'id_artikel',
@@ -33,4 +33,5 @@ class Artikel extends Model
     {
         return $this->belongsToMany(Komentar::class, 'tb_detail', 'id_artikel', 'id_komentar');
     }
+
 }

@@ -46,11 +46,11 @@
                                     <p class="text-xs">{{ $k->created_at }}</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mt-4">{{ $k->isi_komentar }}</p>
+                            <p class="text-white mt-4">{{ $k->isi_komentar }}</p>
                         </li>
                         @empty
                         <li class="py-4 mb-8">
-                            <p class="text-gray-600">Tidak Ada Komentar</p>
+                            <p class="text-white">Tidak Ada Komentar</p>
                         </li>
                     @endforelse
                 </ul>
@@ -64,19 +64,19 @@
                 <div class="mb-4">
                     <label for="nama" class="block font-bold mb-2">Nama:</label>
                     <input type="text" name="nama" id="nama"
-                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-red-500">
+                        class="w-full px-3 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-red-500">
                 </div>
     
                 <div class="mb-4">
                     <label for="isi_komentar" class="block font-bold mb-2">Komentar:</label>
                     <textarea name="isi_komentar" id="isi_komentar" rows="4"
-                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-red-500"></textarea>
+                        class="w-full px-3 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-red-500"></textarea>
                 </div>
     
                 <div class="mb-4">
                     <label for="email" class="block font-bold mb-2">Email:</label>
                     <input type="email" name="email" id="email"
-                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-red-500">
+                        class="w-full px-3 py-2 border border-gray-300 text-black rounded focus:outline-none focus:border-red-500">
                 </div>
     
                 <div>
