@@ -41,7 +41,7 @@
 
                     @foreach ($artikels as $artikel)
                         <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4 mr-10 mt-8">
+                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4 mr-10 mt-8" style="margin-right: 10px">
                             <a href="{{ route('artikel.show', ['id' => $artikel->id_artikel]) }}">
                                 <img class="rounded-t-lg object-cover h-48 w-full" src="/assets/bg.jpg"
                                     alt="" />

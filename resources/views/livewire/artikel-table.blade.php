@@ -17,7 +17,7 @@
                     Tulis Artikel Baru
                 </button> -->
             </div>
-            <thead class="bg-yellow-400 text-white uppercase dark:bg-gray-700">
+            <thead class="bg-yellow-500 text-white uppercase dark:bg-gray-700">
                 <tr>
                     <th scope="col"
                         class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">No
@@ -37,8 +37,9 @@
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                {{-- {{dd($artikels)}} --}}
                 @foreach ($artikels as $artikel)
-                    @if ($artikel->id_penulis === Auth::user()->id)
+                    @if ($artikel->id_penulis === Auth::user()->id_penulis)
                         <tr class="bg-white">
                             <td
                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black dark:text-gray-200">

@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link href="cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     @stack('styles')
 
     <!-- Scripts --->
@@ -36,7 +37,7 @@
         </div>
     @endif
     <div class="flex justify-center items-center min-h-screen bg-cover bg-center"
-        style="padding-top: 100px;">
+        style="background-image: url('/assets/background.jpg');">
         <div class="max-w-md w-full bg-white bg-opacity-90 rounded-lg shadow-lg">
             <div class="max-w-md w-full bg-white rounded-lg shadow-lg">
                 <div class="px-6 py-20">
@@ -50,7 +51,7 @@
                         <div class="rounded-md shadow-sm">
                             <div>
                                 <input aria-label="username" name="username" type="username" required
-                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                    class="appearance-none rounded-none relative block w-full px-3 py-2 bg-white border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                     placeholder="Username">
                             </div>
                             <div class="-mt-px">
