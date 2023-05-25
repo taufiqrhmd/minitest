@@ -5,23 +5,23 @@
 <div class="container">
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-white dark:text-gray-400">
-            <thead class="bg-yellow-500 text-white uppercase dark:bg-gray-700">
+            <thead class="bg-blue-300 text-white uppercase dark:bg-gray-700">
                 <tr>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">No
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">No
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Username
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Username
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Status
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Status
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Tanggal
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Tanggal
                         Pendaftaran
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Aksi
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Aksi
                     </th>
                 </tr>
             </thead>

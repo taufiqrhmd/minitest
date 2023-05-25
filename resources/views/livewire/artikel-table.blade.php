@@ -17,22 +17,22 @@
                     Tulis Artikel Baru
                 </button> -->
             </div>
-            <thead class="bg-yellow-500 text-white uppercase dark:bg-gray-700">
+            <thead class="bg-blue-300 text-white uppercase dark:bg-gray-700">
                 <tr>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">No
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">No
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Judul
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Judul
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Tanggal
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Tanggal
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Preview
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Preview
                     </th>
                     <th scope="col"
-                        class="px-6 py-3 text-left text-xs font-semibold text-white uppercase">Aksi
+                        class="px-6 py-3 text-left text-xs font-semibold text-black uppercase">Aksi
                     </th>
                 </tr>
             </thead>

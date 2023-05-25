@@ -21,17 +21,18 @@
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
 </head>
-<body>
+<body class="bg-gray-300">
     <div class="container text-center" style="padding-top: 100px;">
-        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Selamat Datang di MINIARTICLE</h1>
-        <p class="mb-0 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Platform untuk menulis dan membaca sebuah artikel terkini yang telah ditulis.</p>
-        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Ayo jadilah bagian dari penciptaan artikel terkini.</p>
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl dark:text-white">Selamat Datang di MINIARTICLE</h1>
+        <p class="mb-0 text-lg font-normal text-gray-600 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-600">Platform untuk menulis dan membaca sebuah artikel terkini yang telah ditulis.</p>
+        <p class="mb-6 text-lg font-normal text-gray-600 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-600">Ayo jadilah bagian dari penciptaan artikel terkini.</p>
+        <br>
         <div class="row">
             <div class="col">
-                <a href="login" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-800 rounded-lg hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                <a href="login" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                 Log In
                 </a>
-                <a href="register" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-800 rounded-lg hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                <a href="register" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                 Register
                 </a>
             </div>
@@ -56,7 +57,7 @@
                                     Penulis : {{ $artikel->penulis->username }}
                                 </p>
                                 <a href="{{ route('artikel.show', ['id' => $artikel->id_artikel]) }}"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-800 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-700">
+                                    class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                                     Selengkapnya .....
                                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
